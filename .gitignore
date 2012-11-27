@@ -1,0 +1,11 @@
+build/*
+*.pbxuser
+*.mode1v3
+xcuserdata
+
+InfoPlist.h
+
+.svn
+
+.DS_Store
+profile
