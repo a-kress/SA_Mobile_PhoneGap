@@ -39,7 +39,7 @@ body {
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
-    margin:0px;
+    margin:0;
     padding:0px;
     text-transform:uppercase;
     width:100%;
@@ -115,21 +115,19 @@ h1 {
 }
 
 #footer_navigation {
-	position:absolute;
-	bottom:-12px;
-	width:100%;
+	bottom:0; left:0;
+    height:48px;
+    background-color:#c27b00;
+    border-top:1px solid #eee;
 }
-#footer_navigation li {
-	float:left;
-	padding:10px;
-	list-style-type:none;
-	border:solid 1px;
-	border-collapse:collapse;
-}
+
 .text_search {
 	width:100%;
 	margin:0 auto;
 }
 .search_btn{
 	width: 225px;
+}
+#tdiv {
+	padding:10px;	
 }

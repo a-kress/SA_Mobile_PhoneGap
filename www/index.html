@@ -9,18 +9,27 @@
         <title>PhoneGap Dev Test</title>
     </head>
     <body>
+        <div data-role="page">
+            
+            <div id='tdiv'>
+                <input type='text' name='serail_search' id='serial_search' placeholder='serial number' class='text_search' />
+                <a href="#" data-role="button" data-icon="star" data-theme="a" class='search_btn'>search</a>
+            </div>
+           
+            <div id='device_result'>
+                
+            </div>
+            
+            <div data-role="footer" id="footer_navigation" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" class="ui-btn-active">Device</a></li>
+                        <li><a href="batch.html">Batch</a></li>
+                    </ul>
+                </div>
+            </div>
         
-        <div id='tdiv'>
-            <input type='text' name='serail_search' id='serial_search' placeholder='searial number' class='text_search' />
-            <a href="result.html" data-role="button" data-icon="star" data-theme="a" class='search_btn'>search</a>
         </div>
-       
-        
-        <ul id="footer_navigation">
-            <li><a href="index.html">Device Search</a></li>
-            <li><a href="#">Batch List</a></li>
-        </ul>
-        
         <script type="text/javascript" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
