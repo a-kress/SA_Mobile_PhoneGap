@@ -116,7 +116,6 @@ h1 {
 
 #footer_navigation {
 	bottom:0; left:0;
-    height:48px;
     background-color:#c27b00;
     border-top:1px solid #eee;
 }
@@ -126,12 +125,28 @@ h1 {
 	margin:0 auto;
 }
 .search_btn{
-	width: 225px;
+	width: 200px;
+	float:right;
 }
 #tdiv {
 	padding:10px;	
 }
 #device_result {
-    padding:5px;
-    
+	clear:both;
+}
+	#device_result label {
+		display:block;
+		padding:5px;
+		font-weight:bold;
+		font-size:18px;
+	}
+	#device_result label span{
+		font-weight:normal;
+	}
+#info_tabs{
+	border:solid 1px grey;
+	margin:5px;
+	display:block;
+	height:220px;
+	background:#666;
 }
