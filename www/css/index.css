@@ -131,6 +131,7 @@ h1 {
 #tdiv {
 	padding:10px;	
 }
+
 #device_result {
 	clear:both;
 }
@@ -140,13 +141,28 @@ h1 {
 		font-weight:bold;
 		font-size:18px;
 	}
+	
 	#device_result label span{
 		font-weight:normal;
 	}
+
 #info_tabs{
 	border:solid 1px grey;
 	margin:5px;
 	display:block;
 	height:220px;
 	background:#666;
+}
+
+#batch .ui-listview-filter{
+    padding:0px;
+    margin:-15px 0 0 0;
+}
+
+#batch{
+    margin-top:15px;
+}
+
+#batch_list{
+    clear:both;
 }

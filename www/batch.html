@@ -4,18 +4,22 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.min.css" />
         <title>PhoneGap Dev Test</title>
     </head>
     <body>
         
         <div data-role="page">
         
-            <div>
-                <span>hallo!!</span>
+            <div data-role="header"> 
+                <h1>Batch Manager</h1> 
+                <a href="#" data-icon="add" data-role="button" class='add_btn' id='new_batch'>New</a>
             </div>
             
+            <div id='batch'>
+                <ul data-role="listview" class="ui-listview" id='batch_list' data-filter="true"></ul>
+            </div>
             
             <div data-role="footer" id="footer_navigation" data-position="fixed" data-tap-toggle="false">
                 <div data-role="navbar">
@@ -32,9 +36,11 @@
         
         <script type="text/javascript" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery-mobile-1.2.0.min.js"></script>
+        
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
         <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/batch.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>

@@ -10,6 +10,6 @@ $("div[data-role*='page']").live('pageshow', function(event, ui) {
                 $("#device_result").html(html_str);    
         },'json');
     });
-    
-    
 });
+
+
