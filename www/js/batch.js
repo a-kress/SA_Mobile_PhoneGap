@@ -3,15 +3,15 @@ $("div[data-role*='page']").live('pageshow', function(event, ui) {
     if(!test_storage()) return false;
     // other wise continue.
     $("#batch_list").listview();
-    
-    list = localStorage.getItem('batch');
-        
-    if(list){
-        list_obj = $.parseJSON(list);
-        $.each(list_obj, function(i, v){
-            $("#batch_list").append('<li id="'+ v.idx +'" class="batch_list_item"><a href="#">Batch: '+v.timestamp+"</a></li>").listview("refresh");
-            console.log(i);console.log(v);
-        });
+    var list = localStorage.getItem('batch');
+    if(!!list){
+        var list_obj = $.parseJSON(list);
+	if(!!list_obj){
+	    $.each(list_obj, function(i, v){
+                $("#batch_list").append('<li id="'+ v.idx +'" class="batch_list_item"><a href="#">Batch: '+v.timestamp+"</a></li>").listview("refresh");
+                console.log(i);console.log(v);
+            });
+	}
     }
     
     $("#clear_batch").click(function(){
@@ -20,10 +20,6 @@ $("div[data-role*='page']").live('pageshow', function(event, ui) {
     });
     
     var dump = [];
-                                 
-    $("#new_batch").delegate('click',function(){
-                             alert("do something");
-    });
                                  
     $("#new_batch").click(function(){
         var ts = (new Date()).getTime();
