@@ -1,18 +1,19 @@
-$("div[data-role*='page']").live('pageshow', function(event, ui) {
+$("div[data-role*='page']").live('pageshow', function(event, ui) { 
     $.mobile.allowCrossDomainPages = true;    
     $(".search_btn").bind('tap',function(){     
         $("#device_result").html("<h1>Please hold..</h1><h2>"+$("#serial_search").val()+"</h2>");
         $.post("http://akress.com/test.php",{ actn: "serial_search", lukeup: $("#serial_search").val() }, 
             function(data){
-                var html_str = "<label>Serial#: <span>"+data.serial+"</span></label>";
-                html_str += "<label>Asset: <span>"+data.serial+"</span></label>";
+                var html_str = "<label>Search: <span>"+$("#serial_search").val()+"</span></label>";
+                html_str += "<label>Serial#: <span>"+data.serial+"</span></label>";
+				html_str += "<label>Asset: <span>"+data.serial+"</span></label>";
                 html_str += "<label>Device type: <span>"+data.devtype+"</span></label>";
-                $("#device_result").html(html_str);    
+                html_str += "<label>Time stamp: <span>"+data.now+"</span></label>";
+				$("#device_result").html(html_str);    
         },'json');
     });
-    
-    
-    // the code below should only work on the batch page.                          
+	
+	 // the code below should only work on the batch page.                          
     $("#batch_list").listview();
     var list = localStorage.getItem('batch');
     if(!!list){
@@ -52,7 +53,16 @@ $("div[data-role*='page']").live('pageshow', function(event, ui) {
         
         localStorage.setItem('batch', strJSON);
         //console.log(localStorage);
-    });                                 
+    }); 
+	
+	$("#send_batch").click(function(){
+		$.post("http://akress.com/test.php", {actn:'send_batch', batch_data:localStorage.getItem('batch')}, function(data){
+			if(data) alert(data.success);
+			localStorage.clear();
+			$("#batch_list").html("");
+		},'json');
+	});
+	
                                  
 });
 
