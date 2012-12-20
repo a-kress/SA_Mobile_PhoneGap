@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		025A5C85167ADC5A00C86ED6 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 025A5C84167ADC5A00C86ED6 /* config.xml */; };
+		0284AD801682DC990017A169 /* barcodescanner.js in Sources */ = {isa = PBXBuildFile; fileRef = 0284AD7F1682DC990017A169 /* barcodescanner.js */; };
+		0284AD821682DF470017A169 /* CDVBarcodeScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0284AD811682DF470017A169 /* CDVBarcodeScanner.mm */; };
+		0284AD851682DF810017A169 /* zxing-all-in-one.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0284AD831682DF810017A169 /* zxing-all-in-one.cpp */; };
+		0284AD871682E11B0017A169 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0284AD861682E11B0017A169 /* AssetsLibrary.framework */; };
+		0284AD891682E12D0017A169 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0284AD881682E12D0017A169 /* CoreVideo.framework */; };
+		0284AD8B1682E1410017A169 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0284AD8A1682E1410017A169 /* libiconv.dylib */; };
 		0286117D1678621100D7ED1B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0286117C1678621100D7ED1B /* Default.png */; };
 		0286117F1678621700D7ED1B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0286117E1678621700D7ED1B /* Default@2x.png */; };
 		028611811678621E00D7ED1B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 028611801678621E00D7ED1B /* Default-568h@2x.png */; };
@@ -61,6 +67,13 @@
 
 /* Begin PBXFileReference section */
 		025A5C84167ADC5A00C86ED6 /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = config.xml; path = www/config.xml; sourceTree = "<group>"; };
+		0284AD7F1682DC990017A169 /* barcodescanner.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = barcodescanner.js; path = www/js/barcodescanner.js; sourceTree = "<group>"; };
+		0284AD811682DF470017A169 /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CDVBarcodeScanner.mm; sourceTree = "<group>"; };
+		0284AD831682DF810017A169 /* zxing-all-in-one.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "zxing-all-in-one.cpp"; sourceTree = "<group>"; };
+		0284AD841682DF810017A169 /* zxing-all-in-one.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "zxing-all-in-one.h"; sourceTree = "<group>"; };
+		0284AD861682E11B0017A169 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0284AD881682E12D0017A169 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		0284AD8A1682E1410017A169 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		0286117C1678621100D7ED1B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0286117E1678621700D7ED1B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		028611801678621E00D7ED1B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -105,6 +118,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0284AD8B1682E1410017A169 /* libiconv.dylib in Frameworks */,
+				0284AD891682E12D0017A169 /* CoreVideo.framework in Frameworks */,
+				0284AD871682E11B0017A169 /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -166,6 +182,10 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				0284AD8A1682E1410017A169 /* libiconv.dylib */,
+				0284AD881682E12D0017A169 /* CoreVideo.framework */,
+				0284AD861682E11B0017A169 /* AssetsLibrary.framework */,
+				0284AD7F1682DC990017A169 /* barcodescanner.js */,
 				025A5C84167ADC5A00C86ED6 /* config.xml */,
 				301BF56E109A69640062928A /* www */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
@@ -238,6 +258,9 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				0284AD831682DF810017A169 /* zxing-all-in-one.cpp */,
+				0284AD841682DF810017A169 /* zxing-all-in-one.h */,
+				0284AD811682DF470017A169 /* CDVBarcodeScanner.mm */,
 			);
 			name = Plugins;
 			path = SA_Mobile_PhoneGap/Plugins;
@@ -398,6 +421,9 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				0284AD801682DC990017A169 /* barcodescanner.js in Sources */,
+				0284AD821682DF470017A169 /* CDVBarcodeScanner.mm in Sources */,
+				0284AD851682DF810017A169 /* zxing-all-in-one.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,8 +479,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: adam Kress (S3637JJF3Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: adam Kress (S3637JJF3Q)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -465,8 +491,8 @@
 				INFOPLIST_FILE = "SA_Mobile_PhoneGap/SA_Mobile_PhoneGap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "iTrack Mobile";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "94ADB278-9C25-4614-AC2F-077ACE1F4922";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "94ADB278-9C25-4614-AC2F-077ACE1F4922";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -477,8 +503,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: adam Kress (S3637JJF3Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: adam Kress (S3637JJF3Q)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SA_Mobile_PhoneGap/SA_Mobile_PhoneGap-Prefix.pch";
@@ -487,7 +513,8 @@
 				INFOPLIST_FILE = "SA_Mobile_PhoneGap/SA_Mobile_PhoneGap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "iTrack Mobile";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "94ADB278-9C25-4614-AC2F-077ACE1F4922";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "94ADB278-9C25-4614-AC2F-077ACE1F4922";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -496,7 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: adam Kress (S3637JJF3Q)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: adam Kress (S3637JJF3Q)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
@@ -522,8 +549,8 @@
 					"-all_load",
 					"-Obj-C",
 				);
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C7077E8F-43A1-4ECF-9D25-A29A943A15F3";
+				PROVISIONING_PROFILE = "4B4E4DEC-7DD7-4030-837E-2C5552A4C45A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4B4E4DEC-7DD7-4030-837E-2C5552A4C45A";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -534,7 +561,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: adam Kress (S3637JJF3Q)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: adam Kress (S3637JJF3Q)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
@@ -560,8 +587,8 @@
 					"-all_load",
 					"-Obj-C",
 				);
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C7077E8F-43A1-4ECF-9D25-A29A943A15F3";
+				PROVISIONING_PROFILE = "4B4E4DEC-7DD7-4030-837E-2C5552A4C45A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4B4E4DEC-7DD7-4030-837E-2C5552A4C45A";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "";
