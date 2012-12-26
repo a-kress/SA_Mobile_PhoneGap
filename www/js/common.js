@@ -1,6 +1,7 @@
 $("div[data-role*='page']").live('pageshow', function(event, ui) { 
-    $.mobile.allowCrossDomainPages = true;    
-    $(".search_btn").bind('tap',function(){     
+    $.mobile.allowCrossDomainPages = true;
+    $.mobile.defaultTransition = 'none';
+    $(".search_btn").bind('tap',function(){
         $("#device_result").html("<h1>Please hold..</h1><h2>"+$("#serial_search").val()+"</h2>");
         $.post("http://akress.com/test.php",{ actn: "serial_search", lukeup: $("#serial_search").val() }, 
             function(data){
@@ -63,6 +64,23 @@ $("div[data-role*='page']").live('pageshow', function(event, ui) {
 		},'json');
 	});
 	
+    $("#scan_bc").click(function(){
+        window.plugins.barcodeScanner.scan(
+        function(result) {
+            if (result.cancelled)
+                alert("the user cancelled the scan");
+            else
+                alert("we got a barcode: " + result.text);
+            },
+            function(error) {
+                alert("scanning failed: " + error);
+            }
+        )
+    });
+    
+    $("#image_capture").click(function(){
+        takePicture();
+    });
                                  
 });
 
@@ -76,3 +94,17 @@ function test_storage() {
     }
 }
 
+
+function takePicture() {
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
+    destinationType: Camera.DestinationType.FILE_URI }); 
+}
+
+function onSuccess(imageURI) {
+    var image = document.getElementById('myImage');
+    image.src = imageURI;
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}    
