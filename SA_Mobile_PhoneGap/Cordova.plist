@@ -33,7 +33,7 @@
 	</array>
 	<key>Plugins</key>
 	<dict>
-		<key>BarcodeScanner</key>
+		<key>com.phonegap.plugins.barcodescanner.BarcodeScanner</key>
 		<string>CDVBarcodeScanner</string>
 		<key>org.apache.cordova.barcodeScanner</key>
 		<string>CDVBarcodeScanner</string>
